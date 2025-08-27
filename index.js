@@ -15,33 +15,40 @@ document.getElementById("police-id").addEventListener('click',function(){
 })
 
 // fire service
- document.getElementById("police-id").addEventListener('click',function(){
-    console.log("police click");
+ document.getElementById("fire-id").addEventListener('click',function(){
+    console.log("fire click");
  })
 
 
-//  amu
- document.getElementById("police-id").addEventListener('click',function(){
-    console.log("police click");
+//  amublance
+ document.getElementById("ambulance-id").addEventListener('click',function(){
+    console.log("ambulance click");
+ })
+//   woman & children
+  document.getElementById("woman-id").addEventListener('click',function(){
+    console.log("womwn click");
  })
 
-  document.getElementById("police-id").addEventListener('click',function(){
-    console.log("police click");
+//  anti
+
+  document.getElementById("anti-id").addEventListener('click',function(){
+    console.log("anti click");
  })
 
-  document.getElementById("police-id").addEventListener('click',function(){
-    console.log("police click");
+//  electricity
+
+  document.getElementById("electricity-id").addEventListener('click',function(){
+    console.log("electricity click");
+ })
+//  brac 
+
+  document.getElementById("brac-id").addEventListener('click',function(){
+    console.log("brac click");
  })
 
-  document.getElementById("police-id").addEventListener('click',function(){
-    console.log("police click");
- })
+//  railway
 
-  document.getElementById("police-id").addEventListener('click',function(){
-    console.log("police click");
- })
-
-  document.getElementById("police-id").addEventListener('click',function(){
-    console.log("police click");
+  document.getElementById("railway-id").addEventListener('click',function(){
+    console.log("railway click");
  })
 
