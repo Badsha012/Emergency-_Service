@@ -1,47 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency Service</title>
     <!-- daisy cdn -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="">
-    <section class="flex justify-between items-center ">
-        <div class="flex items-center p-2 my-2"> 
-            <img src="./assets/logo.png" class="w-[50px] mt-3" alt="" srcset="">
-            <h3 class="text-xl font-bold text-[#006747]">Emergency<br> Service</h3>
-        </div>
-        <div class="p-6">
-            <button class="btn btn-active bg-[rgba(65,255,107,0.1)] rounded-3xl text-xl font-bold">0<span>❤️</span></button>
-            <button class="btn btn-active bg-[#41ff6b1a] rounded-3xl text-xl font-bold">100<span><img src="./assets/coin.png" class="w-[30px]" alt="" srcset=""></span></button>
-            <button class="btn btn-active btn-success rounded-3xl text-white">2 Copy</button>
-        </div>
+  </head>
+  <body class="">
+    <section class="flex justify-between items-center">
+      <div class="flex items-center p-2 my-2">
+        <img src="./assets/logo.png" class="w-[50px] mt-3" alt="" srcset="" />
+        <h3 class="text-xl font-bold text-[#006747]">
+          Emergency<br />
+          Service
+        </h3>
+      </div>
+      <div class="p-6">
+        <button
+          class="btn btn-active bg-[rgba(65,255,107,0.1)] rounded-3xl text-xl font-bold"
+        >
+          0<span>❤️</span>
+        </button>
+        <button
+          class="btn btn-active bg-[#41ff6b1a] rounded-3xl text-xl font-bold"
+        >
+          100<span
+            ><img src="./assets/coin.png" class="w-[30px]" alt="" srcset=""
+          /></span>
+        </button>
+        <button class="btn btn-active btn-success rounded-3xl text-white">
+          2 Copy
+        </button>
+      </div>
     </section>
 
     <!--banner  -->
-    <div class=" text-center  bg-gradient-to-b from-[#013223] to-[#006747] ">
-      <div class="  mb-2 flex justify-center p-2 "> 
-         <img src="./assets/logo.png" class="w-[50px]"  alt="" srcset="">
+    <div class="text-center bg-gradient-to-b from-[#013223] to-[#006747]">
+      <div class="mb-2 flex justify-center p-2">
+        <img src="./assets/logo.png" class="w-[50px]" alt="" srcset="" />
+      </div>
+      <h1 class="text-xl font-bold text-[#ffffff] my-3">
+        Emergency Service Directory
+      </h1>
+      <p class="font-bold text-[#ffffff] p-2">
+        Government Emergency Services at Your Fingertip – A Project by
+        Government of the People’s Republic of Bangladesh
+      </p>
     </div>
-        <h1 class="text-xl font-bold text-[#ffffff] my-3">জরুরি সেবা ডিরেক্টরি</h1>
-        <p class="font-bold text-[#ffffff] p-2">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
 
-    </div>
+    <main class="bg-[#41ff6b1a]">
+      <section class="w-11/12 mx-auto grid grid-cols-12 gap-10 p-10">
+        <section class="border-2 border-blue-600 col-span-9">
+          <div class=" grid grid-cols-3 gap-10">
+            <div class="card bg-base-100  shadow-sm">
+              <div class="flex justify-between items-center p-5" >
+               
+                  <img src="./assets/emergency.png" class="rounded-lg shadow-lg  w-[27px]" alt="Shoes" />
+                  <p class="text-white">🩷</p>
+               
+              </div>
 
-    <main>
-        <section class=" w-11/12  mx-auto grid grid-cols-12 gap-10 p-10">
-            <section class="border-2 border-blue-600 col-span-9">
-                <h1>heel</h1>
-            </section>
-            <aside class="border-2  border-red-600 col-span-3">
-                <h1>hello</h1>
+              <div class="card-body">
+                <h2 class="card-title font-bold">
+                    National Emergency Number</h2>
+                <p> National Emergency</p>
+                <h1 class="text-2xl font-bold">999</h1>
+                <button class="btn  ">All</button>
+                </div>
 
-            </aside>
+                <div class="gap-10 flex justify-between p-5">
+                    <button class="btn text-[#D4D6D5]">Copy</button>
+                    <button class="btn btn-success">Call</button>
+                </div>
+                
+             
+            </div>
+            <div class="card bg-base-100 shadow-sm">
+              <div class="flex justify-between items-center p-2" >
+               
+                  <img src="./assets/emergency.png" class="rounded-lg shadow-lg w-[27px]" alt="Shoes" />
+                  <p class="text-white">🩷</p>
+               
+              </div>
+
+              <div class="card-body">
+                <h2 class="card-title">
+                  Card Title
+                  <div class="badge badge-secondary">NEW</div>
+                </h2>
+                <p>
+                  A card component has a figure, a body part, and inside body
+                  there are title and actions parts
+                </p>
+                <div class="card-actions justify-end">
+                  <div class="badge badge-outline">Fashion</div>
+                  <div class="badge badge-outline">Products</div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-base-100  shadow-sm">
+              <div class="flex justify-between items-center p-2" >
+               
+                  <img src="./assets/emergency.png" class="rounded-lg shadow-lg w-[27px]" alt="Shoes" />
+                  <p class="text-white">🩷</p>
+               
+              </div>
+
+              <div class="card-body">
+                <h2 class="card-title">
+                  Card Title
+                  <div class="badge badge-secondary">NEW</div>
+                </h2>
+                <p>
+                  A card component has a figure, a body part, and inside body
+                  there are title and actions parts
+                </p>
+                <div class="card-actions justify-end">
+                  <div class="badge badge-outline">Fashion</div>
+                  <div class="badge badge-outline">Products</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+         
         </section>
+        <aside class="border-2 border-red-600 col-span-3">
+          <h1>hello</h1>
+        </aside>
+      </section>
     </main>
-    
-</body>
+  </body>
 </html>
