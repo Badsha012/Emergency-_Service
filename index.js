@@ -1,65 +1,14 @@
-// // Emergency
-// document.getElementById("emergency-id").addEventListener("click", function () {
-//   console.log("Emergency click");
-// });
 
-// // police
-// document.getElementById("police-id").addEventListener("click", function () {
-//   console.log("police click");
-// });
-
-// // fire service
-// document.getElementById("fire-id").addEventListener("click", function () {
-//   console.log("fire click");
-// });
-
-// //  amublance
-// document.getElementById("ambulance-id").addEventListener("click", function () {
-//   console.log("ambulance click");
-// });
-// //   woman & children
-// document.getElementById("woman-id").addEventListener("click", function () {
-//   console.log("womwn click");
-// });
-
-// //  anti
-
-// document.getElementById("anti-id").addEventListener("click", function () {
-//   console.log("anti click");
-// });
-
-// //  electricity
-
-// document
-//   .getElementById("electricity-id")
-//   .addEventListener("click", function () {
-//     console.log("electricity click");
-//   });
-// //  brac
-
-// document.getElementById("brac-id").addEventListener("click", function () {
-//   console.log("brac click");
-// });
-
-// //  railway
-
-// document.getElementById("railway-id").addEventListener("click", function () {
-//   console.log("railway click");
-// });
-
-
-// ===== Navbar Elements =====
 const heartBtn = document.querySelectorAll(".fa-heart");
-const heartCount = document.querySelector("section button:first-child"); // First button (Heart count)
+const heartCount = document.querySelector("section button:first-child"); 
 let favCount = 0;
 
-const coinBtn = document.querySelectorAll("section button")[1]; // Coin button
+const coinBtn = document.querySelectorAll("section button")[1]; 
 let coins = 100;
 
-const copyBtnDisplay = document.querySelectorAll("section button")[2]; // Copy counter
+const copyBtnDisplay = document.querySelectorAll("section button")[2]; 
 let copyCount = 0;
 
-// ===== History Section =====
 const historySection = document.querySelector("aside");
 const historyList = document.createElement("div");
 historyList.className = "p-4 space-y-2";
@@ -67,16 +16,14 @@ historySection.appendChild(historyList);
 
 const clearBtn = historySection.querySelector("button");
 
-// ===== HEART FEATURE =====
 heartBtn.forEach((heart) => {
   heart.addEventListener("click", () => {
     favCount++;
     heartCount.innerHTML = `${favCount} <span><img src="./assets/heart.png" class="w-[20px] md:w-[25px]"/></span>`;
-    heart.classList.toggle("text-red-500"); // visual feedback
+    heart.classList.toggle("text-red-500");
   });
 });
 
-// ===== COPY FEATURE =====
 const copyButtons = document.querySelectorAll(".fa-copy");
 copyButtons.forEach((copyIcon) => {
   copyIcon.parentElement.addEventListener("click", (e) => {
@@ -92,7 +39,7 @@ copyButtons.forEach((copyIcon) => {
   });
 });
 
-// ===== CALL FEATURE =====
+
 const callButtons = document.querySelectorAll(".fa-phone");
 callButtons.forEach((phoneIcon) => {
   phoneIcon.parentElement.addEventListener("click", (e) => {
@@ -128,7 +75,7 @@ callButtons.forEach((phoneIcon) => {
   });
 });
 
-// ===== CLEAR HISTORY =====
+
 clearBtn.addEventListener("click", () => {
   historyList.innerHTML = "";
 });
