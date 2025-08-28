@@ -1,54 +1,135 @@
+// // Emergency
+// document.getElementById("emergency-id").addEventListener("click", function () {
+//   console.log("Emergency click");
+// });
+
+// // police
+// document.getElementById("police-id").addEventListener("click", function () {
+//   console.log("police click");
+// });
+
+// // fire service
+// document.getElementById("fire-id").addEventListener("click", function () {
+//   console.log("fire click");
+// });
+
+// //  amublance
+// document.getElementById("ambulance-id").addEventListener("click", function () {
+//   console.log("ambulance click");
+// });
+// //   woman & children
+// document.getElementById("woman-id").addEventListener("click", function () {
+//   console.log("womwn click");
+// });
+
+// //  anti
+
+// document.getElementById("anti-id").addEventListener("click", function () {
+//   console.log("anti click");
+// });
+
+// //  electricity
+
+// document
+//   .getElementById("electricity-id")
+//   .addEventListener("click", function () {
+//     console.log("electricity click");
+//   });
+// //  brac
+
+// document.getElementById("brac-id").addEventListener("click", function () {
+//   console.log("brac click");
+// });
+
+// //  railway
+
+// document.getElementById("railway-id").addEventListener("click", function () {
+//   console.log("railway click");
+// });
 
 
-// Emergency
-document.getElementById("emergency-id").addEventListener('click',function(){
-    console.log("Emergency click")
-})
+// ===== Navbar Elements =====
+const heartBtn = document.querySelectorAll(".fa-heart");
+const heartCount = document.querySelector("section button:first-child"); // First button (Heart count)
+let favCount = 0;
 
+const coinBtn = document.querySelectorAll("section button")[1]; // Coin button
+let coins = 100;
 
+const copyBtnDisplay = document.querySelectorAll("section button")[2]; // Copy counter
+let copyCount = 0;
 
-// police
-document.getElementById("police-id").addEventListener('click',function(){
+// ===== History Section =====
+const historySection = document.querySelector("aside");
+const historyList = document.createElement("div");
+historyList.className = "p-4 space-y-2";
+historySection.appendChild(historyList);
 
+const clearBtn = historySection.querySelector("button");
 
-    console .log('police click')
-})
+// ===== HEART FEATURE =====
+heartBtn.forEach((heart) => {
+  heart.addEventListener("click", () => {
+    favCount++;
+    heartCount.innerHTML = `${favCount} <span><img src="./assets/heart.png" class="w-[20px] md:w-[25px]"/></span>`;
+    heart.classList.toggle("text-red-500"); // visual feedback
+  });
+});
 
-// fire service
- document.getElementById("fire-id").addEventListener('click',function(){
-    console.log("fire click");
- })
+// ===== COPY FEATURE =====
+const copyButtons = document.querySelectorAll(".fa-copy");
+copyButtons.forEach((copyIcon) => {
+  copyIcon.parentElement.addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    const number = card.querySelector("h1").innerText;
 
+    // Copy to clipboard
+    navigator.clipboard.writeText(number).then(() => {
+      alert(`Copied hotline: ${number}`);
+      copyCount++;
+      copyBtnDisplay.innerText = `${copyCount} Copy`;
+    });
+  });
+});
 
-//  amublance
- document.getElementById("ambulance-id").addEventListener('click',function(){
-    console.log("ambulance click");
- })
-//   woman & children
-  document.getElementById("woman-id").addEventListener('click',function(){
-    console.log("womwn click");
- })
+// ===== CALL FEATURE =====
+const callButtons = document.querySelectorAll(".fa-phone");
+callButtons.forEach((phoneIcon) => {
+  phoneIcon.parentElement.addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    const serviceName = card.querySelector("h2").innerText;
+    const number = card.querySelector("h1").innerText;
 
-//  anti
+    if (coins < 20) {
+      alert("Not enough coins! Please recharge.");
+      return;
+    }
 
-  document.getElementById("anti-id").addEventListener('click',function(){
-    console.log("anti click");
- })
+    // Deduct coins
+    coins -= 20;
+    coinBtn.innerHTML = `${coins} <span><img src="./assets/coin.png" class="w-[30px]"/></span>`;
 
-//  electricity
+    // Alert message
+    alert(`Calling ${serviceName} at ${number}`);
 
-  document.getElementById("electricity-id").addEventListener('click',function(){
-    console.log("electricity click");
- })
-//  brac 
+    // Add to history with time
+    const callTime = new Date().toLocaleTimeString();
+    const historyItem = document.createElement("div");
+    historyItem.className =
+      "p-2 border rounded-lg bg-gray-50 flex justify-between items-center";
+    historyItem.innerHTML = `
+      <div>
+        <p class="font-bold">${serviceName}</p>
+        <p class="text-sm text-gray-600">${number}</p>
+      </div>
+      <span class="text-xs text-gray-500">${callTime}</span>
+    `;
+    historyList.appendChild(historyItem);
+  });
+});
 
-  document.getElementById("brac-id").addEventListener('click',function(){
-    console.log("brac click");
- })
-
-//  railway
-
-  document.getElementById("railway-id").addEventListener('click',function(){
-    console.log("railway click");
- })
+// ===== CLEAR HISTORY =====
+clearBtn.addEventListener("click", () => {
+  historyList.innerHTML = "";
+});
 
