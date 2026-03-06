@@ -1,65 +1,43 @@
-Q1: What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+# 🚑 Emergency Service Directory - Bangladesh
 
+An interactive and responsive web application designed to provide quick access to essential emergency contact numbers in Bangladesh. This project serves as a one-stop directory for government and non-government helplines.
 
-Ans:
-getElementById("idName"):
+---
 
-শুধু id দিয়ে element নেয়।
-একটাই element ফেরত দেয়।
+## 🚀 Live Demo
+https://emergency-service-ten.vercel.app/
 
-getElementsByClassName("className"):
+---
 
-শুধু class দিয়ে element নেয়।
-একাধিক element থাকলে HTMLCollection দেয়।
+## ✨ Features
 
+- **Quick Access:** Direct contact information for 999 (National Emergency), Police, Fire Service, Ambulance, and more.
+- **Copy to Clipboard:** Easily copy any emergency number with a single click for quick sharing or dialing.
+- **Call Simulation:** Dedicated 'Call' buttons for each service.
+- **Responsive Design:** Fully optimized for Mobile, Tablet, and Desktop using Tailwind CSS and DaisyUI.
+- **Call History Tracking:** A sidebar dedicated to keeping track of your interactions (Call History).
+- **Gamified UI:** User profile header showing hearts, coins, and a copy counter to enhance UX.
 
-querySelector("CSS-selector"):
+---
 
-যেকোনো CSS selector ব্যবহার করা যায় (#id, .class, tag)।
-শুধু প্রথম matching element ফেরত দেয়।
+## 🛠️ Tech Stack
 
+- **Frontend:** HTML5, [Tailwind CSS](https://tailwindcss.com/), [DaisyUI](https://daisyui.com/)
+- **Icons:** [Font Awesome 7.0](https://fontawesome.com/)
+- **Scripting:** Pure JavaScript (ES6+)
 
-querySelectorAll("CSS-selector"):
+---
 
-সবগুলো matching element ফেরত দেয়।
-Output হয় NodeList (forEach loop চালানো যায়)।
-
-
-Q2: How do you create and insert a new element into the DOM?
-
-Ans:
-Element তৈরি → document.createElement("div")
-Content যোগ করা → .textContent = "Hello"
-Parent element খুঁজে পাওয়া → document.getElementById("container")
-DOM এ ঢোকানো → .appendChild(newDiv)
-
-
-Q3: What is Event Bubbling and how does it work?
-Ans:
-
-
-যখন একটা event (যেমন click) child element এ ঘটে, তখন সেটা ধাপে ধাপে তার parent → grandparent → root পর্যন্ত propagate হয়।
-Default behavior হলো event bubbling।
-
-
-Q4: What is Event Delegation in JavaScript? Why is it useful?
-
-Ans:
-
-
-Event delegation হলো parent element এ event listener বসানো, তারপর child element এর event detect করা।
-যেহেতু events bubble করে, তাই parent থেকে child এর event handle করা যায়।
+## 📸 Project Preview
 
 
 
-Q5: What is the difference between preventDefault() and stopPropagation()?
+---
 
-Ans:
-preventDefault():
-ব্রাউজারের default কাজ বন্ধ করে।
-Example: Form submit করলে reload বন্ধ করতে
+## 📁 Project Structure
 
-stopPropagation()
-
-Event bubbling বা capturing থামিয়ে দেয়।
-Example: Child element এ click করলে parent এর event চালাতে না চাইলে
+```text
+├── assets/             # Images, Icons, and Logo files
+├── index.html          # Main structure and UI
+├── index.js            # JavaScript logic (Copy, Call, History)
+└── README.md           # Documentation
